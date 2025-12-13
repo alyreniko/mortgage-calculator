@@ -60,7 +60,7 @@ const formatPercent = (value) =>
 </script>
 
 <template>
-  <div class="space-y-6 min-w-lg max-w-lg">
+  <div class="space-y-2 w-full max-w-xl mx-auto">
     <!-- Стоимость недвижимости -->
     <div class="rounded-2xl bg-slate-100 px-5 py-4 fit-content">
       <div class="flex items-start justify-between gap-4">
@@ -141,39 +141,32 @@ const formatPercent = (value) =>
     </div>
 
       <!-- Блок с результатами -->
-      <div class="rounded-2xl bg-slate-100 px-5 py-4 fit-content space-y-2">
-        <div class="font-semibold uppercase tracking-wide text-neutral-900 mb-2">
-          Результаты расчёта
-        </div>
-      
-        <div class="flex justify-between text-neutral-900">
-          <span class="text-neutral-500">Ежемесячный платёж:</span>
-          <span class="font-semibold text-xl">
-            {{ formatCurrency(monthlyPayment) }} ₽
-          </span>
-        </div>
-      
-        <div class="flex justify-between text-neutral-900">
-          <span class="text-neutral-500">Начисленные проценты:</span>
-          <span class="font-semibold text-xl">
-            {{ formatCurrency(overpayment) }} ₽
-          </span>
-        </div>
-      
-        <div class="flex justify-between text-neutral-900">
-          <span class="text-neutral-500">Долг + проценты:</span>
-          <span class="font-semibold text-xl">
-            {{ formatCurrency(principalPlusInterest) }} ₽
-          </span>
-        </div>
-      
-        <div class="flex justify-between text-neutral-900">
-          <span class="text-neutral-500">Переплата:</span>
-          <span class="font-semibold text-red-500 text-xl">
-            {{ formatPercent(overpaymentPercent) }} %
-          </span>
-        </div>
-      </div>
+<div class="rounded-2xl bg-slate-100 px-5 py-4 fit-content space-y-2">
+  <div class="font-semibold uppercase tracking-wide text-neutral-900 mb-2">
+    Результаты расчёта
+  </div>
+
+  <div class="flex flex-col sm:flex-row justify-between text-neutral-900">
+    <span class="text-neutral-500 mb-1 sm:mb-0">Ежемесячный платёж:</span>
+    <span class="font-semibold text-xl">{{ formatCurrency(monthlyPayment) }} ₽</span>
+  </div>
+
+  <div class="flex flex-col sm:flex-row justify-between text-neutral-900">
+    <span class="text-neutral-500 mb-1 sm:mb-0">Начисленные проценты:</span>
+    <span class="font-semibold text-xl">{{ formatCurrency(overpayment) }} ₽</span>
+  </div>
+
+  <div class="flex flex-col sm:flex-row justify-between text-neutral-900">
+    <span class="text-neutral-500 mb-1 sm:mb-0">Долг + проценты:</span>
+    <span class="font-semibold text-xl">{{ formatCurrency(principalPlusInterest) }} ₽</span>
+  </div>
+
+  <div class="flex flex-col sm:flex-row justify-between text-neutral-900">
+    <span class="text-neutral-500 mb-1 sm:mb-0">Переплата:</span>
+    <span class="font-semibold text-red-500 text-xl">{{ formatPercent(overpaymentPercent) }} %</span>
+  </div>
+</div>
+
     </div>
 </template>
 
