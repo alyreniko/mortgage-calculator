@@ -55,6 +55,6 @@ To get a local copy up and running, follow these simple steps.
 
 <div align="center">
 
-Made with ❤️ by [alyreniko](https://github.com/alyreniko)
+Made with ❤️ by [arslanninin](https://github.com/arslanninin)
 
 </div>
